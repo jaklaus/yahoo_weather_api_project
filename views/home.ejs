@@ -1,0 +1,28 @@
+<% include partials/header.ejs %>
+
+<div class="jumbotron">
+	<div class="container">
+		<h1>WEATHER API PROJECT</h1>
+	</div>
+</div>
+
+<h3>Enter city below:</h3>
+
+<div class="input-group, text-center">
+	<form action="/newCity" method="POST" class="navbar-form">
+		<div class="form-group">
+	    	<input type="text" name="cityInputName" placeholder="City Search" class="form-control">
+	  	</div>
+	  	<button type="submit" class="btn btn-success">Submit</button>
+	</form>
+ </div><!-- /input-group -->
+
+
+	 <h2>The weather in <%= location.city %>, <%= location.region %> is currently:</h2>
+
+	 <h1><%= condition.temp %>&#8457; and <%= condition.text %></h1>
+
+
+
+
+<% include partials/footer.ejs %>
