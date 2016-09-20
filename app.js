@@ -27,6 +27,6 @@ app.post("/newCity", function(req,res){
 	res.redirect("/");
 })
 
-app.listen(3000, function(req,res){
+app.listen(process.env.PORT, process.env.IP, function(req,res){
 	console.log("weather api server running!")
 });
